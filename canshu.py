@@ -1,10 +1,10 @@
-from openpyxl import workbook,load_workbook
+from openpyxl import load_workbook
+from getpath import getpath
 
 class Excel_Zhuce(object):
-    file = 'D:\python学习\网易云\百度\CNode\参数.xlsx'
-    wb = load_workbook(file)
+    wb = load_workbook(getpath('canshu.xlsx'))
     sheet = wb.get_sheet_by_name('注册')
-    user,passwd,re_passwd,email,perfact = [],[],[],[],[sheet.cell(row=2,column=6).value]
+    user,passwd,re_passwd,email,perfact = [0],[0],[0],[0],[sheet.cell(row=2,column=6).value]
     for i in range(3,8):
         user.append(sheet.cell(row=i,column=2).value)
         passwd.append(sheet.cell(row=i,column=3).value)

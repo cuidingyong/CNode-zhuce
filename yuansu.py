@@ -1,4 +1,4 @@
-class Zhuce(object):
+class YS_Zhuce(object):
     zhuce_into = lambda x: x.find_element_by_link_text('注册')
     jianchadian1 = lambda x: x.find_element_by_class_name('active')
     username = lambda x: x.find_element_by_id('loginname')
